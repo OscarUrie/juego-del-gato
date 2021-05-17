@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/jugador_uno_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/descripcion_general"
+        android:src="@drawable/ic_baseline_compare_arrows_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/jugador_dos_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/casilla_0"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_grande"
+                android:layout_marginEnd="@dimen/margin_chico"
+                android:layout_marginTop="@dimen/margin_grande"
+                android:layout_marginBottom="@dimen/margin_chico"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="0"/>
+            <ImageView
+                android:id="@+id/casilla_1"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_chico"
+                android:layout_marginEnd="@dimen/margin_chico"
+                android:layout_marginTop="@dimen/margin_grande"
+                android:layout_marginBottom="@dimen/margin_chico"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="1"/>
+            <ImageView
+                android:id="@+id/casilla_2"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_chico"
+                android:layout_marginEnd="@dimen/margin_grande"
+                android:layout_marginTop="@dimen/margin_grande"
+                android:layout_marginBottom="@dimen/margin_chico"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="2"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/casilla_3"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_grande"
+                android:layout_marginEnd="@dimen/margin_chico"
+                android:layout_marginTop="@dimen/margin_chico"
+                android:layout_marginBottom="@dimen/margin_chico"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="3"/>
+            <ImageView
+                android:id="@+id/casilla_4"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_chico"
+                android:layout_marginEnd="@dimen/margin_chico"
+                android:layout_marginTop="@dimen/margin_chico"
+                android:layout_marginBottom="@dimen/margin_chico"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="4"/>
+            <ImageView
+                android:id="@+id/casilla_5"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_chico"
+                android:layout_marginEnd="@dimen/margin_grande"
+                android:layout_marginTop="@dimen/margin_chico"
+                android:layout_marginBottom="@dimen/margin_chico"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="5"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/casilla_6"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_grande"
+                android:layout_marginEnd="@dimen/margin_chico"
+                android:layout_marginTop="@dimen/margin_chico"
+                android:layout_marginBottom="@dimen/margin_grande"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="6"/>
+            <ImageView
+                android:id="@+id/casilla_7"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_chico"
+                android:layout_marginEnd="@dimen/margin_chico"
+                android:layout_marginTop="@dimen/margin_chico"
+                android:layout_marginBottom="@dimen/margin_grande"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="7"/>
+            <ImageView
+                android:id="@+id/casilla_8"
+                android:layout_width="@dimen/tamanio_casilla"
+                android:layout_height="@dimen/tamanio_casilla"
+                android:layout_marginStart="@dimen/margin_chico"
+                android:layout_marginEnd="@dimen/margin_grande"
+                android:layout_marginTop="@dimen/margin_chico"
+                android:layout_marginBottom="@dimen/margin_grande"
+                android:contentDescription="@string/descripcion_juego"
+                android:src="@drawable/ic_empty_square" android:scaleType="fitCenter"
+                android:onClick="casillaSeleccionada"
+                android:tag="8"/>
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

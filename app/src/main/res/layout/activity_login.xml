@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:padding="16dp">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_login"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/string_email"
+                android:inputType="textEmailAddress"
+                android:importantForAutofill="no"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gris_claro"
+                android:textSize="18sp"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/string_password"
+                android:inputType="textPassword"
+                android:importantForAutofill="no"
+                android:textColorHint="@color/gris_claro"
+                android:textSize="18sp"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+            <Button
+                android:id="@+id/boton_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/fondo_boton_login"
+                android:onClick="iniciarSesion"
+                android:text="@string/text_boton_login"
+                android:textSize="18sp"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+            <Button
+                android:id="@+id/boton_singup_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/fondo_boton_singup"
+                android:onClick="registrarUsuario"
+                android:text="@string/text_boton_singup"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

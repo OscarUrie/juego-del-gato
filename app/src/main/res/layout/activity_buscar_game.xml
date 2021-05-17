@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BuscarGameActivity"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/progress_bar_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--<ProgressBar
+            android:id="@+id/progress_bar_find_game"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_view"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            app:lottie_fileName="game_loading.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="5dp" />
+
+        <TextView
+            android:id="@+id/mensaje_mientras_carga"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/string_loading"
+            android:textColor="@color/gris_claro"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/menu_juego"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/descripcion_general"
+                android:src="@drawable/ic_tic_tac_toe" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <Button
+                android:id="@+id/boton_juega_online"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/azulito"
+                android:onClick="jugarJuego"
+                android:text="@string/jugar_juego"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_jugar_juego"
+                app:iconGravity="start"
+                app:iconSize="16dp"
+                app:iconTint="@color/white"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <Button
+                android:id="@+id/boton_ver_ranking"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/amarillo"
+                android:onClick="verRanking"
+                android:text="@string/ver_ranking"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_ranking"
+                app:iconGravity="start"
+                app:iconSize="16dp"
+                app:iconTint="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

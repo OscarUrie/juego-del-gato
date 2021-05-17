@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tamanio_casilla">100dp</dimen>
+    <dimen name="margin_chico">5dp</dimen>
+    <dimen name="margin_grande">10dp</dimen>
+</resources>

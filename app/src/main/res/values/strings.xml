@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="title_activity_game">GameActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="string_email">Email</string>
+    <string name="string_password">Password</string>
+    <string name="text_boton_login">Login</string>
+    <string name="text_boton_singup">Sing Up</string>
+    <string name="string_name">Name</string>
+    <string name="string_loading">loading…</string>
+    <string name="descripcion_general">Estra es una descripcion general</string>
+    <string name="jugar_juego">Jugar Online</string>
+    <string name="ver_ranking">Ver Ranking</string>
+    <string name="descripcion_juego">Aqui esta cada casilla del juego</string>
+    <string name="cero_puntos">0 puntos</string>
+    <string name="un_punto">+1 punto</string>
+    <string name="tres_puntos">+3 puntos</string>
+    <string name="juego_empatatado"> Juego Empatado!</string>
+    <string name="solo_ganador"> Ganaste!</string>
+</resources>
